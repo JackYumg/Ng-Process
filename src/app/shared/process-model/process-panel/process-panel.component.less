@@ -1,0 +1,85 @@
+.process-panel {
+    // height: 100%;
+    // width: 100%;
+}
+
+@bc: rgb(100, 60, 7);
+
+:host {
+    background: #cccccc;
+    display: inline-block;
+    position: relative;
+    height: 200px;
+    width: 200px;
+
+    .size-controls {
+
+        // 四个小方块
+        .btn-sizer {
+            width: 4px;
+            height: 4px;
+            position: absolute;
+            border: 1px solid @bc;
+            background: #fff;
+        }
+
+        .left-top {
+            top: 0;
+            left: 0;
+            cursor: nw-resize;
+        }
+
+        .right-top {
+            top: 0;
+            right: 0;
+            cursor: ne-resize;
+        }
+
+        .right-bottom {
+            bottom: 0;
+            right: 0;
+            cursor: nw-resize;
+        }
+
+        .left-bottom {
+            bottom: 0;
+            left: 0;
+            cursor: ne-resize;
+        }
+
+        // 四个小圆
+        .circle {
+            width: 5px;
+            height: 5px;
+            border: 1px solid @bc;
+            position: absolute;
+            border-radius: 50%;
+            background: #fff;
+            cursor: crosshair;
+        }
+
+        .left-center {
+            left: 0;
+            top: 50%;
+            transform: translate(0, 50%);
+        }
+
+        .top-center {
+            left: 50%;
+            top: 0;
+            transform: translate(50%, 0);
+        }
+
+        .right-center {
+            right: 0;
+            top: 50%;
+            transform: translate(0, 50%);
+        }
+
+        .bottom-center {
+            left: 50%;
+            bottom: 0;
+            transform: translate(500, 0);
+        }
+    }
+}
